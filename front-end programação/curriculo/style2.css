@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+body {
+              background: linear-gradient(to left, #aa10e7, #ae64eb, #4ebeb5);
+              border: solid 5px;
+              border-radius: 20px;
+              text-align: center;
+              font-family: 'PT Serif', serif;
+              margin: 30px;
+              padding: 40px;
+              height: 100%;
+
+}
+
+.menus {
+              font-family: 'PT Serif', serif;
+              font-size: 25px;
+
+}
+
+.insira {
+              font-size: 20px;
+              border-radius: 20px;
+              display: inline-block;
+              text-align: center;
+
+}
+
+.button {
+              font-size: 23px;
+              background-color: black;
+              color: azure;
+              padding: 10px;
+              margin: 20px;
+}
+
+.corpo {
+              font-size: 20px;
+              font-family: 'PT Serif', serif;
+              border-top: solid 3px white;
+}
+
+.tabela {
+              text-align: left;
+              background-color: rgb(112, 112, 255);
+              color: azure;
+              font-family: 'Lilita One', cursive;
+              font-size: 30px;
+              
+}
+.tabela tr td:hover{
+              font-size: 40px;
+              color: black;
+              background-color: rgba(255, 255, 255, 0.616);
+
+}

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Document</title>
+
+    <style>
+        body{
+          animation-name: cores;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+            color: rgb(255, 255, 255);
+            
+            
+            
+        }
+
+        @keyframes cores {
+          0% {background: #eeff00;}
+          25% {background: #ff02f2;}
+          50% {background: #0084ff;}
+          75% {background: #ff0000;}
+          100% {background: #1404f1;}
+        }
+        h1{
+            color: black;
+            display: flex;
+            justify-content: center;
+        }
+        p{
+            border: solid 3px;
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            background-color: rgba(163, 24, 24, 0.664);
+            margin: 20px;
+            box-shadow: 15px 15px 10px black;
+        }
+
+        .cabecalho{
+          border-bottom: solid 5px;
+        }
+
+        div{
+          margin: 20px;
+        }
+
+        .imagem{
+            padding-top: 20px;
+            
+        }
+        .table{
+          margin: 20px;
+          border: solid 5px rgb(24, 19, 19);
+          width: -200px;
+          height: 80%;
+          color: black;
+          font-weight: 700;
+          box-shadow: 15px 15px 18px white;
+        }
+
+        .carosel{
+          margin-top: 30px;
+          margin-left: 450px;
+          width: 1000px;
+          height: 1000px;
+          
+        }
+
+        .table:hover{
+          font-size: 40px;
+          color: rgb(255, 0, 0);
+        }
+
+        #formulario{
+            color: rgb(255, 255, 255);
+            font-weight: 800;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            box-shadow: 15px 15px 18px  white;
+            margin: 20px;
+            width: 800px;
+            padding: 0px;
+        }
+
+        #formulario:hover{
+          color: red;
+          font-size: 20px;
+        }
+
+        .col{
+          margin: 20px;
+          border-left: solid 5px rgb(255, 255, 255);
+        }
+
+        .media{
+          background: radial-gradient(circle, rgba(152, 19, 19, 0.575) 1%, rgba(242, 231, 255, 0.575) 56%, rgba(0, 183, 255, 0.575) 100%);
+          color: black;
+          font-weight: 700;
+          margin-top: -370px;
+          box-shadow: 15px 15px 18px white;
+          border: solid 5px;
+          border-color:  rgb(197, 39, 39) rgb(2, 23, 212) rgb(255, 251, 3) rgb(3, 255, 16);
+          padding: 10px;
+        }
+    </style
+</head>
+
+<header class="cabecalho">
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon" ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01"  >
+          <a class="navbar-brand" href="#" style="color: white;">Marca escondida</a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" style="color: white;">Home <span class="sr-only">(Página atual)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: white;">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" style="color: white;">Desativado</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </nav>
+  </header>
+<body>
+     
+
+      <div class="carosel">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://images.contentstack.io/v3/assets/bltb730eada072bdbf4/blt93683a02b71c27b4/63e662a764d283110a2630e1/LOCKIN.jpg?width=2472&height=1390" alt="Primeiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://images.contentstack.io/v3/assets/bltb730eada072bdbf4/bltb92bcb5d625db140/62f69b116f3f3701d6ffcbc6/COMUNICADO_COM_FOTO_B_(1)COMUNICADO_COM_FOTO_B_-_WIDE_(1).jpg?width=2472&height=1390" alt="Segundo Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZBOMBMwKv12Z3UNmFgxA46zSNFTpzROVii4KvvYp0cWp17lyN0tj8nbIi2NRomABZ2uk&usqp=CAU" alt="Terceiro Slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Próximo</span>
+  </a>
+</div>
+</div>
+
+      <div class="media">
+  <img class="mr-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_8ZdJN2gAN8Dbr-JzD4MIABBB1EnNhogSg&usqp=CAU" alt="Imagem de exemplo genérica" width="200px" height="200px">
+  <div class="media-body">
+    <h5 class="mt-0">Cabeçalho da mídia</h5>
+    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+  </div>
+</div>
+
+
+<div class="row">
+    <div class="col">
+      <table class="table">
+ <thead lass="table-success">
+  <tr class="table-primary">
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Kills</th>
+      <th scope="col">Nickname</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-secondary">
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>23</td>
+      <td>@markzin_</td>
+    </tr>
+    <tr class="table-danger">
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>18</td>
+      <td>@j_a_c_o_b</td>
+    </tr>
+    <tr class="table-info">
+      <th scope="row">3</th>
+      <td>Zuck</td>
+      <td>45</td>
+      <td>@ZU_CK-67</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+
+    <div class="col">
+      <form id="formulario">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Senha</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Endereço</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Endereço 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Cidade</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEstado">Estado</label>
+      <select id="inputEstado" class="form-control">
+        <option selected>Escolher...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6 ">
+      <label for="inputCEP">CEP</label>
+      <input type="text" class="form-control" id="inputCEP">
+      <div class="alert alert-primary" role="alert">
+          O campo CEP é obrigatório!
+</div>
+      </div>
+      <div class="form-group col-md-6 ">
+        <label for="inputCEP">Nickname</label>
+        <input type="text" class="form-control" id="inputCEP">
+        
+        </div>
+        </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Clique em mim
+      </label>
+    </div>
+  </div>
+  <button type="button" class="btn-block btn-lg btn-outline-primary">Entrar</button>
+</form>
+
+      </div>
+  </div>
+  
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

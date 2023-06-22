@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+body{
+    background-color: black;
+    text-align: center;
+}
+.container{
+    height: 400px;/* ALTURA */
+    width: 800px;/* LARGURA */
+    border-radius: 10px;/* ARREDONDAR */
+    box-shadow: 5px 5px 10px black;
+    text-align: center;
+    margin: 100px auto;
+    font-size: 60px;
+    font-family: 'Rubik', sans-serif;
+    animation: boder 1.5s linear infinite;
+    background: linear-gradient(135deg,#902dd1 25%, #f03434,#5d5d 100%);
+    cursor: default;
+    border: solid 5px white;
+    padding-top: 40px;
+}
+h2{
+    color: white;
+    font-size: 50px;
+    font-family: 'Rubik', sans-serif;
+}
+h1{
+    color: white;
+}
+
+@keyframes boder {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.pcontainer{
+  background-color: #019fe9;
+  height: 700px;
+  padding: 50px;
+
+}
+
+
+  /* relogio analogico */
+  .clock {
+    width: 600px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.829);
+    border-radius: 50%;
+    border: 5px solid rgb(252, 0, 0);
+    position: relative;
+    margin-top: 0%;
+    margin-left: 33%;
+    bottom: -50px;
+    
+  }
+  .analogico{
+    background-color: #01a0e988;
+    height: 800px;
+    border-top: solid 10px orange;
+    padding: 50px;
+  }
+  
+  .clock .number {
+    --rotation: 0;
+  
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 0px;
+    font-family: 'Rubik', sans-serif;
+
+  }
+  
+  .clock .number.number-1 {
+    --rotation: 30deg;
+  }
+  .clock .number.number-2 {
+    --rotation: 60deg;
+  }
+  .clock .number.number-3 {
+    --rotation: 90deg;
+  }
+  .clock .number.number-4 {
+    --rotation: 120deg;
+  }
+  .clock .number.number-5 {
+    --rotation: 150deg;
+  }
+  .clock .number.number-6 {
+    --rotation: 180deg;
+  }
+  .clock .number.number-7 {
+    --rotation: 210deg;
+  }
+  .clock .number.number-8 {
+    --rotation: 240deg;
+  }
+  .clock .number.number-9 {
+    --rotation: 270deg;
+  }
+  .clock .number.number-10 {
+    --rotation: 300deg;
+  }
+  .clock .number.number-11 {
+    --rotation: 330deg;
+  }
+  
+  /* Ponteiros */
+  .clock::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    z-index: 11;
+    background-color: rgb(19, 12, 12);
+    transform: translate(-50%, -50%);
+  }
+  
+  .clock .hand {
+    --rotation: 0;
+  
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: rgb(179, 34, 34);
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    transform-origin: bottom;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .clock .hand.seconds {
+    width: 6px;
+    height: 40%;
+    background-color: red;
+  }
+  
+  .clock .hand.minutes {
+    width: 7px;
+    height: 35%;
+    background-color: rgb(229, 255, 0);
+  }
+  
+  .clock .hand.hours {
+    width: 10px;
+    height: 25%;
+    background-color: rgb(0, 0, 0);
+  }

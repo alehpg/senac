@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BT">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatando tabela</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+</head>
+<body>
+
+    <h1>Teste de tabela com JQuerry</h1>
+
+    <table border="10" id="tabela" class="table-light">
+       <thead>
+        <tr >
+        <th> Nome</th><th>Idade</th><th>Endereço</th><th>Telefone</th><th>cidade</th>
+    </tr>
+       </thead>
+       <tbody>
+        <tr class="bg-warning" >
+            <td >Generino</td><td>30 anos</td><td>Rua silva</td><td>44 988224422</td><td>Maringa</td>
+        </tr>
+        <tr class="bg-success" >
+            <td > João </td><td>35 anos</td><td>Rua amazonas</td><td>44 988213020</td><td>Paranavaí</td>
+        </tr>
+        <tr class="bg-primary">
+            <td >Beltrano</td><td>15 anos</td><td>Rua dos beija flores</td><td>44 988354917</td><td>Nova Londrina</td>
+        </tr>
+       </tbody>
+    </table> 
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+
+    <script>
+       $(document).ready( function () {
+    $('#tabela').DataTable();
+} );
+
+var table = new DataTable('#tabela', {
+    language: {
+        url: 'https://cdn.datatables.net/plug-ins/1.13.4/i18n/pt-PT.json',
+    },
+});
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>

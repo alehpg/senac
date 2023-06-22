@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap');
+body {
+    background-image: url(https://i.pinimg.com/originals/8f/e2/54/8fe25406addfa9b53685fe5d89abe978.jpg);
+    background-color: #be8585;
+    color: #b15757;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 22px;
+}
+
+.jogo {
+    background: rgba(136, 111, 111, 0.397);
+    border: solid 5px;
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    width: 650px;
+    height: -100px;
+    border: -70px
+    
+
+}
+
+.quadrado {
+    width: 200px;
+    height: 200px;
+    border: solid 3px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 150px;
+
+}
+.button-gerar{
+    margin: 7px;
+    border-radius: 20px;
+    border: solid 3px black;
+    width: 105px;
+    height: 35px;
+    background: black;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+.button-gerar:hover{
+    background: rgb(87, 196, 96);
+    width: 110px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#jogador1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+
+#jogador2{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+.v-s{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.button-reniciar{
+    margin: 7px;
+    border-radius: 20px;
+    border: solid 3px black;
+    width: 105px;
+    height: 35px;
+    background: black;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.button-reniciar:hover{
+    background: rgb(87, 196, 96);
+    width: 110px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    border-bottom: solid 4px ;
+}
+
+.titulo:hover{
+    color: red;
+    
+}
+.container{
+    display: flex;
+    border: solid 5px rgb(0, 0, 0);
+    padding: 50px 50px 50px;
+    background: rgba(134, 109, 109, 0.514);
+    box-shadow: 20px 20px 20px rgb(0, 0, 0);
+    height: 870px;
+}
+
+.direita{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 60, 0, 0.521);
+    padding: 20px;
+    margin-left: 40px;
+    border: solid 5px black;
+    border-radius: 40px;
+}
+
+#nome{
+    color: #000000;
+    font-family: 'Ubuntu', sans-serif;
+}
+.botão-adicionar{
+    border: solid 4px ;
+    border-radius: 20px;
+    box-shadow: 5px 6px 6px black;
+    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    background: rgb(39, 36, 36);
+    color: white;
+}
+
+#quadrado1{
+    background: black;
+}
+
+#quadrado2{
+    background-color: blue;
+}
+
+#quadrado3{
+    background: brown;
+}
+
+#quadrado4{
+    background: coral;
+}
+
+#quadrado5{
+    background-color: green;
+}
+
+#quadrado6{
+    background: purple;
+}
+
+#quadrado7{
+    background-color: orange;
+}
+
+#quadrado8{
+    background: yellow;
+}
+
+#quadrado9{
+    background-color: cyan;
+}
+
+

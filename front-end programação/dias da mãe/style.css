@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Pacifico&family=Roboto:wght@700&display=swap');
+body{
+    background-image: url(https://i.pinimg.com/originals/26/90/cd/2690cd9918e402ec8c48192ce65f389f.gif);
+    background-size: cover;
+}
+.container{
+    width: 600px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.658);
+    border: solid 5px;
+    border-radius: 10px;
+    padding-left: 0%;
+    margin: auto;
+    margin-top: 10%;
+    box-shadow: 18px 18px 20px black;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+}
+button{
+    border-radius: 50px;
+    font-size: 20px;
+    background-color: pink;
+    box-shadow: 5px 5px 10px;
+    border: none;
+    margin: 10px;
+    height: 40px;
+    width: 200px;
+    font-family: 'Acme', sans-serif;
+}
+p{
+    font-family: 'Acme', sans-serif; 
+    font-weight: 500;
+    font-size: 20px;
+}

@@ -1,0 +1,102 @@
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+}
+#gameCanvas{
+    border: solid ;
+    border-radius: 10px;
+    width: 800px;
+    height: 600px;
+    box-shadow: 5px 5px 50px;
+}
+/* NAVEGAÇÃO */
+.navegacao{
+    width: 10,1%;
+    height: 70px;
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: -8px;
+}
+
+.navegacao ul{
+    width: 350px;
+    display: flex;
+}
+
+.navegacao ul li{
+    width: 70px;
+    height: 70px;
+    list-style-type: none;
+    position: relative;
+    z-index: 1;
+}
+
+.navegacao ul li a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    position: relative;
+}
+
+.navegacao ul li a .icone{
+    display: block;
+    line-height: 75px;
+    font-size: 20px;
+    color: #ffffff;
+    position: relative;
+    transition: .5s;
+}
+
+.navegacao ul li a .texto{
+    color: #000000;
+    position: absolute;
+    opacity: 0;
+    transition: .5s;
+    transform: translateY(20px);
+    font-weight: 800;
+}
+
+.navegacao ul li.ativo a .icone{
+    transform: translateY(-20px);
+    color: #000000;
+}
+
+.navegacao ul li.ativo a .texto{
+    opacity: 1;
+    transform: translateY(5px);
+}
+
+.indicador{
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -50%;
+    transition: .5s;
+}
+
+.navegacao ul li:nth-child(1).ativo ~ .indicador{
+    transform: translateX(calc(70px * 0));
+}
+.navegacao ul li:nth-child(2).ativo ~ .indicador{
+    transform: translateX(calc(70px * 1));
+}
+.navegacao ul li:nth-child(3).ativo ~ .indicador{
+    transform: translateX(calc(70px * 2));
+}
+.navegacao ul li:nth-child(4).ativo ~ .indicador{
+    transform: translateX(calc(70px * 3));
+}
+.navegacao ul li:nth-child(5).ativo ~ .indicador{
+    transform: translateX(calc(70px * 4));
+}
+/* fim */

@@ -1,0 +1,36 @@
+body{
+              background-image: url(https://static.vecteezy.com/system/resources/previews/001/987/580/original/abstract-diagonal-white-grey-background-and-texture-free-vector.jpg);
+}
+.text{
+              color: rgb(14, 10, 10);
+              text-align: center;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              border: solid 3px black;
+              border-radius: 100px;
+}
+.item {
+              background-color: rgba(255, 115, 0, 0.116);
+              margin: 5px;
+              font-size: 20px;
+              font-weight: 700;
+              text-align: center;
+              color:rgb(0, 0, 0);
+              border: solid 4px black;
+              border-radius: 20px;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.item:hover {
+              font-size: 30px;
+              color: red;
+}
+.coluna{
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+}
+.linha{
+              grid-template-rows: 100px 300px 300px 300px;
+}
+.foto {
+              margin: 20px;
+              border: solid 3px red;
+}

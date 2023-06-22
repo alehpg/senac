@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&family=Ubuntu:wght@700&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+h1{
+    color: white;
+}
+#navbar{
+    color: rgb(224, 202, 202);
+    border-bottom: solid rgb(255, 255, 255);
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    gap: 50px;
+    height: 60px;
+    text-align: center;
+    padding: 10px;
+}
+
+#nav-button {
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    width: 400px;
+    text-decoration: none;
+}
+
+#nav-button:hover{
+    background: #ff0000;
+    font-size: 20px;
+    border-radius: 100px;
+}
+
+#imagem2{
+    display: flex;
+    justify-content: flex-start;
+}
+#imagem{
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    
+}
+
+body{
+    text-align: center;
+    animation-name: cores;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    border-top: solid;
+    background-color: #eeff00;
+      
+      
+  }
+
+  @keyframes cores {
+    0% {background: #eeff00;}
+    25% {background: #ff02f2;}
+    50% {background: #0084ff;}
+    75% {background: #ff0000;}
+    100% {background: #1404f1;}}
+
+#imagem-container{
+
+    border: solid ;
+    border-radius: 100px;
+    height: 200px;
+}
+
+#imagem-container2{
+    margin-top: 10px;
+    padding: auto;
+    height: 200px;
+    border: solid 3px black;
+    border-radius: 100px;
+}
+.media{
+    border: solid 4px;
+    border-color: solid 3px rgb(173, 50, 50) rgb(2, 23, 212) rgb(255, 251, 3) rgb(3, 255, 16);
+    width: 1000px;
+    margin: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    font-weight: 900;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: 15px 15px 18px black;
+    border-radius: 50px;
+    padding: 20px;
+       
+}
+
+#contexto{
+    color: white;
+    font-weight: 800;
+    padding-top: 20px;
+    border: solid 4px rgb(250, 247, 247);
+    box-shadow: 15px 15px 18px black;
+    padding: 29px;
+    width: 1500px;
+    margin: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 50px;
+}
+
+.media-body{
+    padding: 10px;
+}
+
+#cabecalho {
+  background-color: rgb(12, 8, 8);
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 50px;
+  box-shadow: 20px 16px 10px white;
+    
+}
+
+#titulo{
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    color: white;
+    font-weight: 800;
+    width: 1500px;
+    margin: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#nome{
+    color: white;
+    font-family: 'Sigmar', cursive;
+}
+#nome2{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+#nome3{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 19px;
+}
+
+

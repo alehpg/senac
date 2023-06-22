@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Jogo da Velha</title>
+    
+</head>
+        
+<body>
+    
+    <div class="container">
+    <div class="esquerda">
+        <h1 class="titulo">Jogo da Velha</h1>
+        <input class="button-gerar" type="button" value="Gerar Batalha" onclick="gerar()">
+        <span id="jogador1"></span>
+        <span class="v-s">vs</span>
+        <span id="jogador2"></span>
+        <table class="jogo" border="2">
+            <tr>
+                <td id="quadrado1"  class="quadrado" onclick="jogar(this)"></td>
+                <td id="quadrado2" class="quadrado" onclick="jogar(this)"></td>
+                <td id="quadrado3" class="quadrado" onclick="jogar(this)"></td>
+            </tr>
+
+            <tr>
+                <td id="quadrado4" class="quadrado" onclick="jogar(this)"></td>
+                <td id="quadrado5" class="quadrado" onclick="jogar(this)"></td>
+                <td id="quadrado6" class="quadrado" onclick="jogar(this)"></td>
+            </tr>
+
+            <tr>
+                <td id="quadrado7" class="quadrado" onclick="jogar(this)"></td>
+                <td id="quadrado8" class="quadrado" onclick="jogar(this)"></td>
+                <td id="quadrado9" class="quadrado" onclick="jogar(this)"></td>
+            </tr>
+        </table>
+        <input class="button-reniciar" type="button" class="botao-res" value="Reniciar" onclick="res()"> 
+</div>
+        <div class="direita">
+        <label for="">Nome:</label>
+        <input type="text" id="nome">
+
+        <button class="botão-adicionar" onclick="adicionar()">Adicionar</button>
+        
+        <aside class="lateral">
+            <ul id="lista">
+               
+
+            </ul>
+        </aside>
+        </div> 
+    </div>
+
+    
+</body>
+
+</html>

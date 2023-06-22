@@ -1,0 +1,101 @@
+body{
+    text-decoration: none !important;
+    text-decoration: none !important;
+    
+}
+.fundo{                  
+    background-image: url( https://1.bp.blogspot.com/-P4-bMtMEFKY/T_iFFmbsYcI/AAAAAAAAAbw/GC4u6qO9psI/s1600/HOTEL%2BSESC%2BCAIOBA001.jpg ); 
+    background-size: 100%;       
+    padding: 20px; 
+    margin-bottom: 50px;        
+}
+.aviao{
+    display: flex;
+    justify-content: center;
+    margin-left: 40%;
+    width: 700px;
+    height: 700px;
+}
+.container{
+    display: flex !important;
+    justify-content: center;
+    width: 50px !important;
+}
+.rodape{
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    border-top:solid 5px orange ;
+    text-align: center;
+    
+    
+}
+.card{
+    border: solid  !important;
+    margin-top: 10px;
+    box-shadow: 10px 10px 18px;
+    text-align: center;
+    border-radius: 10px !important;
+    text-decoration: none !important;
+}
+.card:hover{
+    font-size: 30px;
+    font-weight: 700;
+}
+.footer21{
+    display: inline-block;
+}
+.conteudo-de-abertura{
+    margin: 40px;
+}
+#cards{
+    margin: 20px !important;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 400px;
+    height: 550px;
+    padding: 40px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+  }
+  
+  .card:hover {
+    border: 1px solid black;
+    transform: scale(1.);
+  }
+  
+  .card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+   .card-title{
+    color: rgb(0, 0, 0);
+   }
+   .card-text{
+    color: rgb(0, 0, 0);
+   }
+.card-img-top{
+    border: none;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 20px;
+
+}
+.card-img-top:hover {
+    filter: bluer (5px) !important;
+    transition: 2s !important;
+}
