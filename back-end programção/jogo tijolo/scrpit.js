@@ -15,8 +15,8 @@ var canvas = document.getElementById("gameCanvas");
 var desenho = canvas.getContext("2d");
 
 /* configura raquete */
-var raqueteAltura = 5;
-var raqueteLargura = 50;
+var raqueteAltura = 10;
+var raqueteLargura = 70;
 var raqueteX  = (canvas.width - raqueteLargura) / 2; /* centralizar a raquete */
 
 /* configurar a bola */
