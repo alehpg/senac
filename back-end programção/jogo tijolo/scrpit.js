@@ -111,7 +111,7 @@ if(bolaY + bolaDY < BolaRdius){
     bolaDY = -bolaDY;
 }else if( bolaY + bolaDY > canvas.height - BolaRdius){
 
-    if(bolaX > raqueteX && bolaX < raqueteLargura){
+    if(bolaX > raqueteX && bolaX < raqueteX + raqueteLargura){
         bolaDY = -bolaDY /* inverte a direção  */
     }else {
         document.location.reload();/* renicia */
