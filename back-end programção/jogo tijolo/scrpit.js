@@ -30,6 +30,31 @@ var bolaDY = -2; /* direção da bola em Y (acima/ abaixo) */
 var setDireita = false;
 var setEsquerda = false;
 
+function reset(){
+    document.location.reload();
+}
+
+function l1(){
+    velocidadeRaquete = 3;  
+    bolaDX = 3
+    bolaDY = -3
+}
+function le2(){
+    velocidadeRaquete = 15;
+    bolaDX = 5
+    bolaDY = -5
+}
+function le3(){
+    velocidadeRaquete = 20;
+    bolaDX = 6
+    bolaDY = -6
+}function le4(){
+    velocidadeRaquete = 30;
+    bolaDX = 8
+    bolaDY = -8
+
+}
+
 /* movimentação da raquete - detecta descer e subir da tecla */
 document.addEventListener("keydown", descerDaTecla);
 document.addEventListener("keyup", subirDaTecla);
@@ -42,11 +67,17 @@ function descerDaTecla(tecla){
         /* se o valor = "Esquerda || ou valor = "setaEsqeurda" */
     }else if (tecla.key === "Left" || tecla.key === "ArrowLeft" ) {
             setEsquerda = true /* Ativa a setaEsquerda */
-        }
+    }
 }
 
-function subirDaTecla(){
-    
+function subirDaTecla(tecla){
+    if(tecla.key === "Right" || tecla.key === "ArrowRight" ) {
+        setDireita = false /* Ativa variavel setaDireita */
+
+        /* se o valor = "Esquerda || ou valor = "setaEsqeurda" */
+    }else if (tecla.key === "Left" || tecla.key === "ArrowLeft" ) {
+            setEsquerda = false /* Ativa a setaEsquerda */
+        }
 }
 
 function desenharRaquete(){
@@ -57,18 +88,50 @@ function desenharRaquete(){
     desenho.closePath();
 }
 
+
+function desenharBola(){
+    desenho.beginPath();
+    desenho.arc(bolaX, bolaY, BolaRdius, 0, Math.PI * 2);
+    desenho.fillStyle = "blue";
+    desenho.fill();
+    desenho.closePath();
+}
+
 function desenhar(){
     desenho.clearRect(0, 0, canvas.width, canvas.height); /* limpa o frame anterior */
     desenharRaquete();
+    desenharBola();
+
+    /* analisar colisão eixo X, colisão canto direito/esquerdo */
+if(bolaX + bolaDX > canvas.width - BolaRdius || bolaX + bolaDX < BolaRdius){
+    bolaDX = -bolaDX;
+
+}
+/* analisa colisão com a parte de cimas */
+if(bolaY + bolaDY < BolaRdius){
+    bolaDY = -bolaDY;
+}
+
 
     if(setDireita ===true && raqueteX < canvas.width - raqueteLargura){ 
         raqueteX = raqueteX + velocidadeRaquete;
+
+    }else if(setEsquerda && raqueteX > 0){ 
+        raqueteX = raqueteX - velocidadeRaquete;
     }
 
+
+
+    bolaX = bolaX + bolaDX; /* faz a bola andar para direita/esquerda */
+    bolaY = bolaY + bolaDY; /* essa faz a bola andar para cima/baixo */
+
+    
+ 
     requestAnimationFrame(desenhar) /* atualizar tela de forma suave */
     
 
 }
 desenhar(); /* chama a função desenhar */
+
 
 
