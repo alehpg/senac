@@ -31,7 +31,6 @@ var setDireita = false;
 var setEsquerda = false;
 
 function reset(){
-    document.location.reload();
 }
 
 function l1(){
@@ -49,9 +48,9 @@ function le3(){
     bolaDX = 6
     bolaDY = -6
 }function le4(){
-    velocidadeRaquete = 30;
-    bolaDX = 8
-    bolaDY = -8
+    velocidadeRaquete = 20;
+    bolaDX = 7
+    bolaDY = -7
 
 }
 
@@ -110,6 +109,13 @@ if(bolaX + bolaDX > canvas.width - BolaRdius || bolaX + bolaDX < BolaRdius){
 /* analisa colisão com a parte de cimas */
 if(bolaY + bolaDY < BolaRdius){
     bolaDY = -bolaDY;
+}else if( bolaY + bolaDY > canvas.height - BolaRdius){
+
+    if(bolaX > raqueteX && bolaX < raqueteLargura){
+        bolaDY = -bolaDY /* inverte a direção  */
+    }else {
+        document.location.reload();/* renicia */
+    }
 }
 
 
