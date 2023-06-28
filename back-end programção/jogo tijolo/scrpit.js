@@ -47,7 +47,8 @@ function le3(){
     velocidadeRaquete = 20;
     bolaDX = 6
     bolaDY = -6
-}function le4(){
+}
+function le4(){
     velocidadeRaquete = 20;
     bolaDX = 7
     bolaDY = -7
