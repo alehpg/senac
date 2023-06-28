@@ -27,11 +27,34 @@ var bolaY = canvas.height - 30;
 var bolaDX = 2; /* direção da bola em X (esquerda/ direita) */
 var bolaDY = -2; /* direção da bola em Y (acima/ abaixo) */
 
+/* configura tijolos */
+var tijoPorLinha = 3;
+var tijoPorColuna = 6;
+var tijoloAltura = 20;
+var tijoloLargura = 75;
+var tijoloEspacamento = 10;
+var espacamentoSupQuadro = 30;
+var espacamentoEsquerdoQuadro = 30;
+var tijolos = []; /* lista com os tijolos */
+
+/* dedicado apena a inicializção dos tijolos */
+for(var coluna = 0; coluna < tijoPorColuna; coluna++ ){
+    tijolos[coluna] = []; /* 0 1 2 3 4 5 */
+
+    for(var linha = 0; linha < tijoPorLinha; linha++ ){
+        tijolos[coluna][linha] = {x:0, y:0, ativo:1}
+        /* x é posição eaquerda / direita no canva */
+        /*  y é a posição acima / abaixo do canvas */
+        /* ativo, determina se o tijolo aparece ou não, 1 ou 0 */
+
+    }
+
+}
+
+
 var setDireita = false;
 var setEsquerda = false;
 
-function reset(){
-}
 
 function l1(){
     velocidadeRaquete = 3;  
@@ -97,10 +120,39 @@ function desenharBola(){
     desenho.closePath();
 }
 
+function desenharTijolos(){
+    for(var coluna = 0; coluna < tijoPorColuna; coluna++){
+        for(var linha = 0; linha < tijoPorLinha; linha++){
+        
+            if(tijolos[coluna][linha].ativo == 1){ /* verificar se tijolo esta ativo para desenha-lo */
+
+            var tijoloX = (coluna * (tijoloLargura + tijoloEspacamento)+ espacamentoSupQuadro);
+            var tijoloY = (linha * (tijoloAltura + tijoloEspacamento)+ espacamentoSupQuadro);
+
+            tijolos[coluna][linha].x = tijoloX;
+            tijolos[coluna][linha].y = tijoloY;
+
+            desenho.beginPath();
+            desenho.rect(tijoloX, tijoloY, tijoloLargura,tijoloAltura);
+            desenho.fillStyle = "black";
+            desenho.fill();
+            desenho.closePath();
+
+
+            }
+
+        }
+    }
+}
+
 function desenhar(){
     desenho.clearRect(0, 0, canvas.width, canvas.height); /* limpa o frame anterior */
     desenharRaquete();
     desenharBola();
+    desenharTijolos();
+
+
+/* inicio da função colisão */
 
     /* analisar colisão eixo X, colisão canto direito/esquerdo */
 if(bolaX + bolaDX > canvas.width - BolaRdius || bolaX + bolaDX < BolaRdius){
@@ -115,7 +167,7 @@ if(bolaY + bolaDY < BolaRdius){
     if(bolaX > raqueteX && bolaX < raqueteX + raqueteLargura){
         bolaDY = -bolaDY /* inverte a direção  */
     }else {
-        document.location.reload();/* renicia */
+        document.location.reload(); /* renicia */
     }
 }
 
