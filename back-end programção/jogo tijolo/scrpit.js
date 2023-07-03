@@ -60,8 +60,8 @@ function reset(){
 }
 function l1(){
     velocidadeRaquete = 3;  
-    bolaDX = 3
-    bolaDY = -3
+    bolaDX = 4
+    bolaDY = -4
 }
 function le2(){
     velocidadeRaquete = 15;
@@ -166,6 +166,15 @@ function detectaColisão() {
     }
 }
 
+function gameover() {
+    var gameOver = document.getElementById("gameover")
+    gameOver.style.display = "block";
+}
+
+function reniciar(){
+    document.location.reload();
+
+}
 
 function desenhar(){
     desenho.clearRect(0, 0, canvas.width, canvas.height); /* limpa o frame anterior */
@@ -190,7 +199,7 @@ if(bolaY + bolaDY < BolaRdius){
     if(bolaX > raqueteX && bolaX < raqueteX + raqueteLargura){
         bolaDY = -bolaDY /* inverte a direção  */
     }else {
-        document.location.reload(); /* renicia */
+        gameover();
     }
 }
 
