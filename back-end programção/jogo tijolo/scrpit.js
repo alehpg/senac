@@ -37,6 +37,13 @@ var espacamentoSupQuadro = 30;
 var espacamentoEsquerdoQuadro = 30;
 var tijolos = []; /* lista com os tijolos */
 
+/* pontuação  */
+var totalPontuacao = tijoloPorLinha * tijoloPorColuna * 100;
+var pontuacao = 0;
+
+
+
+
 /* dedicado apena a inicializção dos tijolos */
 for(var coluna = 0; coluna < tijoloPorColuna; coluna++ ){
     tijolos[coluna] = []; /* 0 1 2 3 4 5 */
@@ -62,6 +69,7 @@ function l1(){
     velocidadeRaquete = 3;  
     bolaDX = 4
     bolaDY = -4
+    
 }
 function le2(){
     velocidadeRaquete = 15;
@@ -69,15 +77,14 @@ function le2(){
     bolaDY = -5
 }
 function le3(){
-    velocidadeRaquete = 20;
+    velocidadeRaquete = 10;
     bolaDX = 6
     bolaDY = -6
 }
 function le4(){
-    velocidadeRaquete = 20;
-    bolaDX = 7
-    bolaDY = -7
-
+    velocidadeRaquete = 10;
+    bolaDX = 7;
+    bolaDY = -7;
 }
 
 /* movimentação da raquete - detecta descer e subir da tecla */
@@ -154,12 +161,21 @@ function detectaColisão() {
             var tijolo = tijolos [coluna][linha];
             
             if(tijolo.ativo === 1 ){
-                if(bolaX > tijolo.x
-                     && bolaX < tijolo.x + tijoloLargura 
-                     && bolaY > tijolo.y 
-                     && bolaY < tijolo.y + tijoloAltura ){
+                if(bolaX + BolaRdius  > tijolo.x
+                     && bolaX - BolaRdius  < tijolo.x + tijoloLargura 
+                     && bolaY + BolaRdius  > tijolo.y 
+                     && bolaY - BolaRdius  < tijolo.y + tijoloAltura ){
                         bolaDY = -bolaDY;
                         tijolo.ativo = 0;
+
+                        tela = document.getElementById("ponto");
+                        pontuacao = pontuacao +100;
+                        tela.innerHTML = "Score: " + pontuacao;
+                        
+                        if(pontuacao === totalPontuacao){
+                            window.location.reload();
+                        }
+
                 }
             }
         }
@@ -194,9 +210,10 @@ if(bolaX + bolaDX > canvas.width - BolaRdius || bolaX + bolaDX < BolaRdius){
 /* analisa colisão com a parte de cimas */
 if(bolaY + bolaDY < BolaRdius){
     bolaDY = -bolaDY;
-}else if( bolaY + bolaDY > canvas.height - BolaRdius){
+}else if( bolaY + bolaDY > canvas.height - BolaRdius -raqueteAltura){
 
-    if(bolaX > raqueteX && bolaX < raqueteX + raqueteLargura){
+    /* se for maior que o começo da raquete e menor que o final da raquete */
+    if(bolaX > raqueteX && bolaX  < raqueteX + raqueteLargura){
         bolaDY = -bolaDY /* inverte a direção  */
     }else {
         gameover();
