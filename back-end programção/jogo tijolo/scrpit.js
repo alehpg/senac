@@ -93,21 +93,21 @@ document.addEventListener("keyup", subirDaTecla);
 
 function descerDaTecla(tecla){
     /* se o valor = "direita || ou valor = "setaDireita" */
-    if(tecla.key === "Right" || tecla.key === "ArrowRight" ) {
+    if(tecla.key === "d" || tecla.key === "ArrowRight" ) {
         setDireita = true /* Ativa variavel setaDireita */
 
         /* se o valor = "Esquerda || ou valor = "setaEsqeurda" */
-    }else if (tecla.key === "Left" || tecla.key === "ArrowLeft" ) {
+    }else if (tecla.key === "a" || tecla.key === "ArrowLeft" ) {
             setEsquerda = true /* Ativa a setaEsquerda */
     }
 }
 
 function subirDaTecla(tecla){
-    if(tecla.key === "Right" || tecla.key === "ArrowRight" ) {
+    if(tecla.key === "d" || tecla.key === "ArrowRight" ) {
         setDireita = false /* Ativa variavel setaDireita */
 
         /* se o valor = "Esquerda || ou valor = "setaEsqeurda" */
-    }else if (tecla.key === "Left" || tecla.key === "ArrowLeft" ) {
+    }else if (tecla.key === "a" || tecla.key === "ArrowLeft" ) {
             setEsquerda = false /* Ativa a setaEsquerda */
         }
 }
@@ -173,7 +173,8 @@ function detectaColisão() {
                         tela.innerHTML = "Score: " + pontuacao;
                         
                         if(pontuacao === totalPontuacao){
-                            window.location.reload();
+                            var win = document.getElementById("telaWin")
+                            win.style.display = "block"
                         }
 
                 }
@@ -219,7 +220,6 @@ if(bolaY + bolaDY < BolaRdius){
         gameover();
     }
 }
-
 
     if(setDireita ===true && raqueteX < canvas.width - raqueteLargura){ 
         raqueteX = raqueteX + velocidadeRaquete;
