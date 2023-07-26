@@ -129,6 +129,29 @@ function desenharBola(){
     desenho.closePath();
 }
 
+
+function gerarEfeitoSonoro(som){
+    /* criar contexto de audio */
+    var contexto = new (window.AudioContext)();
+    /* fazer uma requesição para carregar o arquivo de som */
+    var requesicao = new XMLHttpRequest();
+    requesicao.open('GET',som,true);
+    requesicao.responseType = 'arraybuffer'; /* armazenar na memoria */
+
+    requesicao.onload = function(){
+        /* decoficar o arquivo de som */
+        contexto.decodeAudioData(requesicao.response, function(buffer){
+            /* reprodução do som no navegador */
+            var fonte = contexto.createBufferSource();
+            fonte.buffer = buffer;
+            /* conecta a saida de som  */
+            fonte.connect(contexto.destination);
+            fonte.start(0); /* executa som */
+        });
+    }
+    requesicao.send();
+}
+
 function desenharTijolos(){
     for(var coluna = 0; coluna < tijoloPorColuna; coluna++){
         for(var linha = 0; linha < tijoloPorLinha; linha++){
