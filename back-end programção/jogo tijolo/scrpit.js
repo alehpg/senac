@@ -62,30 +62,89 @@ for(var coluna = 0; coluna < tijoloPorColuna; coluna++ ){
 var setDireita = false;
 var setEsquerda = false;
 
+function modoImpossivel(){
+    
+}
+
 function reset(){
     document.location.reload();
 }
-function l1(){
-    velocidadeRaquete = 3;  
-    bolaDX = 4
-    bolaDY = -4
+function facil(){
+    raqueteLargura = 90;
+    tijoloPorLinha = 3;
+    tijoloPorColuna = 8;
+    tijoloLargura = 50;
+    tijoloAltura = 30;
+    bolaDX = 5;
+    bolaDY = -5;
+    bolaX = canvas.width/ 2;
+    bolaY = canvas.height -30;
+    totalPontuacao = tijoloPorLinha * tijoloPorColuna *100;
+    iniciarTijolos();
     
 }
-function le2(){
+function medio(){
+    raqueteLargura = 80;
+    tijoloPorLinha = 5;
+    tijoloPorColuna = 9;
+    tijoloLargura = 50;
+    tijoloAltura = 15;
+    bolaDX = 2; 
+    bolaDY = -3;
+    BolaRdius = 7;
+    bolaX = canvas.width/ 2;
+    bolaY = canvas.height -30;
+    velocidadeRaquete = 10
+    pontuacao = 0
+    totalPontuacao = tijoloPorLinha * tijoloPorColuna *100;
+    iniciarTijolos();
+}
+function dificil(){
+    raqueteLargura = 80;
+    tijoloPorLinha = 6;
+    tijoloPorColuna = 11;
+    tijoloLargura = 40;
+    tijoloAltura = 10;
+    BolaRdius = 7;
+    bolaDX = 9;
+    bolaDY = -9;
+    bolaX = canvas.width/ 2;
+    bolaY = canvas.height -30;
     velocidadeRaquete = 15;
-    bolaDX = 5
-    bolaDY = -5
+    totalPontuacao = tijoloPorLinha * tijoloPorColuna *100;
+    pontuacao = 0
+    iniciarTijolos();
 }
-function le3(){
-    velocidadeRaquete = 10;
-    bolaDX = 6
-    bolaDY = -6
+function impossivel(){
+    raqueteLargura = 80;
+    tijoloPorLinha = 14;
+    tijoloPorColuna = 22;
+    tijoloLargura = 20;
+    tijoloAltura = 5;
+    bolaDX = 1;
+    bolaDY = -3;
+    BolaRdius = 5;
+    bolaX = canvas.width/ 2;
+    bolaY = canvas.height -30;
+    velocidadeRaquete = 20;
+    totalPontuacao = tijoloPorLinha * tijoloPorColuna *100;
+    pontuacao = 0
+    iniciarTijolos();
 }
-function le4(){
-    velocidadeRaquete = 10;
-    bolaDX = 7;
-    bolaDY = -7;
+
+function iniciarTijolos(){
+    for (var coluna = 0; coluna < tijoloPorColuna; coluna++){
+    tijolos[coluna] = []
+    for (var linha = 0; linha < tijoloPorLinha; linha++){
+        tijolos[coluna][linha] = {x:5, y:5, ativo:1 }
+
+        }
+   
+    }
 }
+iniciarTijolos();
+
+
 
 /* movimentação da raquete - detecta descer e subir da tecla */
 document.addEventListener("keydown", descerDaTecla);
@@ -194,10 +253,16 @@ function detectaColisão() {
                         tela = document.getElementById("ponto");
                         pontuacao = pontuacao +100;
                         tela.innerHTML = "Score: " + pontuacao;
+                        gerarEfeitoSonoro('moeda.mp3');
+
+                        /* if(modoImpossivel === true1){
+                            bolaDY = bolaDY;
+                        } */
                         
                         if(pontuacao === totalPontuacao){
                             var win = document.getElementById("telaWin")
                             win.style.display = "block"
+                            gerarEfeitoSonoro('win.mp3')
                         }
 
                 }
@@ -215,6 +280,13 @@ function reniciar(){
     document.location.reload();
 
 }
+function gameover(){
+    var menssagem = document.getElementById("gameover");
+    menssagem.style.display="block";
+    bolaDX= 0;
+    bolaDY=0;
+}
+
 
 function desenhar(){
     desenho.clearRect(0, 0, canvas.width, canvas.height); /* limpa o frame anterior */
