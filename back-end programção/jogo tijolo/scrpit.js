@@ -283,6 +283,7 @@ function reniciar(){
 function gameover(){
     var menssagem = document.getElementById("gameover");
     menssagem.style.display="block";
+    gerarEfeitoSonoro('over.mp3');
     bolaDX= 0;
     bolaDY=0;
 }
